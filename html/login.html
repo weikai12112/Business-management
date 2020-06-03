@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <div class="container-fluid nav">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">河北成弘生物科技有限公司</div>
+    </div>
+    <img src="../img/timg.jpg" style="width: 100%;height: 100%;position: absolute;z-index: -1;">
+
+    </img>
+    <div class="background">
+        <div class="itduce">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;河北成弘生物科技有限公司成立于2017年9月，公司总部坐落于河北省石家庄高新区，是一家专门从事健康产品研发、生产、销售及服务的科技型企业。
+            怀揣“传递健康，守护健康”的企业愿景，河北成弘生物科技有限公司专注于内分泌调节产品系列的研发，致力于为顾客提供纯植物提取，功效显著的健康食品，公司关注全民身体状况，倡导人们将“快乐、健康、分享”的理念融入到每一天，养成科学的生活方式，提升身体机能。
+            自成立以来，公司凭借“团结、务实、勤奋、创新”的企业精神，厚积薄发、锐意进取，首创泌醒保健品牌，并在解酒、缓解更年期综合征、缓解痔疮三个领域相继推出核心产品，获得了消费者的无数好评和市场的一致认可。
+            如今，河北成弘生物科技有限公司已经成为众多消费者心中营养与健康的代名词，它给人们带来的不仅是消费者营养与健康的改善，更是一种无价的健康生活理念和健康生活方式。
+        </div>
+        <div class="info pull-right">
+            <div>
+                <div onclick="wayNav(this)" id="0" class="active">用户登录</div>
+<!--                <div onclick="wayNav(this)" id="1">用户注册</div>-->
+            </div>
+            <div id="info">
+                <div>
+                    <div>
+                        <div class="editInfo">
+                            <div>账号</div>
+                            <input type="text" id="loginAccount">
+                        </div>
+                        <div class="editInfo">
+                            <div>密码</div>
+                            <input type="password" id="loginPassword">
+                        </div>
+                    </div>
+
+                    <div class="login" onclick="login()">登录</div>
+                </div>
+                <div class="none">
+                    <div>
+                        <div class="editInfo">
+                            <div>账号</div>
+                            <input type="number" id="account" placeholder="12位账号">
+                        </div>
+                        <div class="editInfo">
+                            <div>密码</div>
+                            <input type="password" id="password1" placeholder="6-16位数字和字母">
+                        </div>
+                        <div class="editInfo">
+                            <div>重复密码</div>
+                            <input type="password" id="password2">
+                        </div>
+                        <div class="identy">
+                            <div id="staff" onclick="identySwitch(this)">员工注册</div>
+                            <div id="admin" onclick="identySwitch(this)">管理员注册</div>
+                        </div>
+                    </div>
+
+                    <div class="login" onclick="regist()">注册</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/login.js"></script>
+</html>

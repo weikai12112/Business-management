@@ -1,0 +1,193 @@
+.center{
+    text-align: center;
+}
+.mid{
+    padding: 30px;
+}
+.block{
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.title{
+    text-align: center;
+    border-bottom: 1px solid grey;
+    line-height: 40px;
+    font-size: 17px;
+    background-color: #f8f9fa;
+    color: #3195fe;
+}
+.active{
+    color: #3195fe;
+}
+.mid>div{
+    padding: 15px;
+}
+.notice{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+.clock{
+    display: flex;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid grey;
+}
+.change{
+    display: flex;
+    background-color: #f8f9fa;
+    border-top: 1px solid grey;
+}
+.change>div{
+    width: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.change>div:hover{
+    color: #3195fe;
+}
+.change>div:nth-child(1){
+    border-right: 1px solid grey;
+}
+.clock>div{
+    width: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 17px;
+    cursor: pointer;
+}
+.clock>div:hover{
+    color: #3195fe;
+}
+.clock>div:nth-child(1){
+    border-right: 1px solid grey;
+}
+.none{
+    display: none;
+}
+.myInfo{
+    display: flex;
+}
+.myInfo>div:nth-child(1){
+    width: 40%;
+    text-align: right;
+}
+.myInfo>div:nth-child(2){
+    width: 60%;
+}
+.infoBody{
+    padding: 20px;
+}
+.clockList{
+    display: flex;
+}
+.clockList>div:nth-child(1){
+    padding-left: 30px;
+    width: 60%;
+}
+.clockList>div:nth-child(2){
+    width: 40%;
+    text-align: center;
+}
+#switch{
+    padding: 15px;
+}
+#hasClock>div:nth-child(1){
+    margin-bottom: 10px;
+}
+#hadClock>div:nth-child(1){
+    margin-bottom: 10px;
+}
+#hasClock{
+    border-top: 1px solid grey;
+    padding-top: 10px;
+}
+.clockBottom{
+    width: 70px;
+    line-height: 30px;
+    background-color: #23527c;
+    color: white;
+    text-align: center;
+    border: 1px solid #204d74;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-left: 80%;
+    cursor: pointer;
+}
+.clockBottom:hover{
+    background-color: #204d74;
+}
+.time{
+    text-align: right;
+    padding-right: 20px;
+}
+.vacate{
+    padding: 15px;
+}
+.vacateBottom{
+    width: 100%;
+    border: 1px solid #204d74;
+    color: #204d74;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+.vacateBottom:hover{
+    background-color: #204d74;
+    color: white;
+    cursor: pointer;
+}
+
+.vacate>input{
+    margin-bottom: 7px;
+}
+.job{
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+.job>div:nth-child(2){
+    margin-left: 25px;
+    color: grey;
+}
+.salary{
+    color: #23527c;
+}
+.infoEdit{
+    width: 60%;
+    z-index: 8;
+    top: 85px;
+    background-color: #f8f9fa;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 20px;
+    display: none;
+}
+.editIpt{
+    display: flex;
+    margin-bottom: 10px;
+}
+.editIpt>div:nth-child(1){
+    width: 30%;
+    line-height: 30px;
+    font-size: 17px;
+    text-align: right;
+    padding-right: 20px;
+}
+.editIpt>input:nth-child(2){
+    width: 50%;
+    height: 30px;
+    font-size: 17px;
+}
+.editTitle{
+    margin-left: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+}

@@ -1,0 +1,102 @@
+.background{
+    height: 520px;
+    padding: 50px;
+}
+.active{
+    background-color: white;
+    border-bottom: 0;
+    color: grey;
+}
+.info{
+    width: 30%;
+    background-color: white;
+    position: absolute;
+    right: 90px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: #00000099 3px 6px 11px 0px;
+    top: 90px;
+}
+.info>div:nth-child(1){
+    display: flex;
+    margin-bottom: 30px;
+    color: white;
+    background-color: #005bc3;
+    box-shadow: #00000033 0px -6px 8px 0px inset;
+    cursor: pointer;
+}
+.itduce{
+    width: 50%;
+    font-size: 22px;
+    padding-left: 30px;
+    line-height: 35px;
+}
+.info>div:nth-child(1)>div{
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+}
+.info>div:nth-child(1)>div:nth-child(1){
+    /*border-right: 1px solid grey;*/
+}
+.editInfo{
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+}
+.editInfo>div:nth-child(1){
+    text-align: center;
+    line-height: 25px;
+    width: 20%;
+    padding-right: 10px;
+}
+.editInfo>input:nth-child(2){
+    width: 55%;
+    height: 25px;
+}
+.login{
+    width: 80%;
+    background-color: #005bc3;
+    border: 1px solid #01438f;
+    line-height: 30px;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.login:hover{
+    background-color: #01438f;
+}
+.none{
+    display: none;
+}
+.identy{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.identy>div{
+    line-height: 30px;
+    width: 20%;
+    border: 1px solid grey;
+    color: grey;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.identy>div:nth-child(1){
+    margin-right: 25px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}

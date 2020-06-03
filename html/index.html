@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <div class="container-fluid nav">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="uaccount">wk</div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" onclick="quit()">退出登录</div>
+    </div>
+
+    <div class="infoEdit block" id="passwordChange">
+        <h3 class="editTitle">密码修改</h3>
+        <div class="editIpt">
+            <div>新密码</div>
+            <input type="password" id="newPassword">
+        </div>
+        <div class="vacateBottom" style="width: 70%;left: 0;right: 0;margin: auto;margin-top: 15px;" onclick="changePassword()">确定修改</div>
+        <div class="vacateBottom" style="width: 70%;left: 0;right: 0;margin: auto;margin-top: 5px;" onclick="closeChange()">取消修改</div>
+    </div>
+    <div class="infoEdit block" id="infoEdit">
+        <h3 class="editTitle">信息修改</h3>
+        <div class="editIpt">
+            <div>姓名</div>
+            <input type="text" id="name">
+        </div>
+        <div class="editIpt">
+            <div>性别</div>
+            <input type="text" placeholder="男" id="sex">
+        </div>
+        <div class="editIpt">
+            <div>国家</div>
+            <input type="text" placeholder="中国" id="nation">
+        </div>
+        <div class="editIpt">
+            <div>爱好</div>
+            <input type="text" id="hobby">
+        </div>
+        <div class="editIpt">
+            <div>生日</div>
+            <input type="text" id="birth">
+        </div>
+        <div class="editIpt">
+            <div>手机</div>
+            <input type="text" id="phone">
+        </div>
+        <div class="editIpt">
+            <div>地址</div>
+            <input type="text" id="address">
+        </div>
+        <div class="editIpt">
+            <div>部门</div>
+            <select name="" id="part">
+                <option id="p1">开发部</option>
+                <option id="p2">人事部</option>
+            </select>
+        </div>
+        <div class="vacateBottom" style="width: 70%;left: 0;right: 0;margin: auto;margin-top: 15px;" onclick="changeInfo()">确定修改</div>
+        <div class="vacateBottom" style="width: 70%;left: 0;right: 0;margin: auto;margin-top: 5px;" onclick="closeInfoEdit()">取消修改</div>
+    </div>
+    <div class="container-fluid mid">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="block">
+                <div class="title">个人信息</div>
+                <div class="infoBody">
+                    <div class="myInfo">
+                        <div>账号：</div>
+                        <div id="account">201811121210</div>
+                    </div>
+                    <div class="myInfo">
+                        <div>类型：</div>
+                        <div id="identy">员工</div>
+                    </div>
+                </div>
+                <div class="change">
+                    <div onclick="openIt()">信息完善</div>
+                    <div onclick="changeP()">修改密码</div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="clock">
+                    <div class="active" id="0" onclick="switchIt(this)">今日打卡</div>
+                    <div id="1" onclick="switchIt(this)">打卡记录</div>
+                </div>
+                <div id="switch">
+                    <div>
+                        <div class="clockBottom" onclick="checkIt()">打卡</div>
+                        <div id="hasClock">
+                            <div class="clockList">
+                                <div>已打卡</div>
+                                <div>时间</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="none">
+                        <div id="hadClock">
+                            <div class="clockList">
+                                <div>已打卡</div>
+                                <div>时间</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="title">请假</div>
+                <div class="vacate">
+                    <input class="form-control" type="text" placeholder="开始请假日期" id="beginTime">
+                    <input class="form-control" type="text" placeholder="结束请假日期" id="endTime">
+                    <input class="form-control" type="text" placeholder="请假原因" id="reason">
+                    <div class="vacateBottom" onclick="vacate()">确定请假</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" id="job">
+            <div class="" id="notice">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" onclick="closeIt(this)">×</button>
+                        <h4 class="modal-title center" id="myModalLabel">公告</h4>
+                    </div>
+                    <div class="modal-body" id="content">今天公司放假</div>
+                    <div class="time">2018.10.10</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" onclick="closeIt()">关闭</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+
+<!--            <div class="block job">-->
+<!--                <h3>日天科技</h3>-->
+<!--                <div>-->
+<!--                    <h4 class="salary">月薪：10k人民币</h4>-->
+<!--                    <div>技术要求：html</div>-->
+<!--                    <div>地址：深圳福田</div>-->
+<!--                    <div>工作福利：</div>-->
+<!--                    <div>电话：17623811138;邮箱：593288785@qq.com</div>-->
+<!--                </div>-->
+<!--            </div>-->
+        </div>
+    </div>
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script rel="script" src="../js/bootstrap-datetimepicker.min.js"></script>
+<script src="../js/index.js"></script>
+</html>

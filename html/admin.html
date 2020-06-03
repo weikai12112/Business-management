@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理端</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="container-fluid nav">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" id="account">wk</div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4"></div>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" onclick="quit()">退出登录</div>
+    </div>
+    <div class="mid_content">
+        <div class="leftNav">
+            <div class="leftLogo" id="userId">Nav</div>
+            <div id="0" onclick="leftNav(this)">公告管理</div>
+            <div id="1" onclick="leftNav(this)">考勤管理</div>
+            <div id="2" onclick="leftNav(this)">员工管理</div>
+            <div id="3" onclick="leftNav(this)">招聘信息</div>
+            <div id="4" onclick="leftNav(this)">请假审核</div>
+        </div>
+        <div id="content">
+            <div class="contents active">
+                <div style="border-bottom: 1px solid grey;">
+                    <h2 class="title">公告</h2>
+                    <textarea class="textArea" name="" id="announceMent" cols="30" rows="10"></textarea>
+                    <div class="BOTTOM" onclick="announceMent()">发送</div>
+                </div>
+                <div id="history">
+                    <h3 class="title">历史公告</h3>
+                </div>
+            </div>
+            <div class="contents" id="check">
+                <h2 class="title">考勤</h2>
+                <h4 id="num"></h4>
+            </div>
+            <div class="contents" id="employ">
+                <h2 class="title">员工</h2>
+                <div class="BOTTOM" id="6" onclick="leftNav(this)">添加员工</div>
+
+            </div>
+            <div class="contents" id="job">
+                <h2 class="title">招聘</h2>
+                <div class="BOTTOM" id="5" onclick="leftNav(this)">发布招聘信息</div>
+            </div>
+            <div class="contents" id="vacate">
+                <h2 class="title">请假</h2>
+                <div style="display: flex;margin-bottom: 20px;cursor:pointer;">
+                    <div id="noResult1" onclick="changeVacate(this)">待审核|</div>
+                    <div id="hadPass1" onclick="changeVacate(this)">已批准|</div>
+                    <div id="hadRefuse1" onclick="changeVacate(this)">已拒绝</div>
+                </div>
+                <div id="allVacate">
+                    <div id="noResult" class="active" style="display: none"></div>
+                    <div id="hadPass" style="display: none"></div>
+                    <div id="hadRefuse" style="display: none"></div>
+                </div>
+            </div>
+            <div class="contents" id="sendJob">
+                <h2 class="title">发布招聘信息</h2>
+                <div class="jobEdit">
+                    <div class="sendJob">
+                        <div>企业名称：</div>
+                        <input type="text" id="companyProfile">
+                    </div>
+                    <div class="sendJob">
+                        <div>技术要求：</div>
+                        <input type="text" id="technicalRequirement">
+                    </div>
+                    <div class="sendJob">
+                        <div>工作薪资：</div>
+                        <input type="text" id="salaryRange">
+                    </div>
+                    <div class="sendJob">
+                        <div>工作地点：</div>
+                        <input type="text" id="address">
+                    </div>
+                    <div class="sendJob">
+                        <div>公司福利：</div>
+                        <input type="text" id="welfare">
+                    </div>
+                    <div class="sendJob">
+                        <div>联系电话：</div>
+                        <input type="text" id="phone">
+                    </div>
+                    <div class="sendJob">
+                        <div>电子邮箱：</div>
+                        <input type="text" id="email">
+                    </div>
+                    <div class="BOTTOM send" onclick="sendWorkInfo()">发布</div>
+                </div>
+            </div>
+            <div class="contents" id="addAccount">
+                <h2 class="title">添加员工</h2>
+                <div class="jobEdit" >
+                    <div class="info-line sendJob">
+                        <div>用户名</div>
+                        <input type="text" id="uName">
+                    </div>
+                    <div class="info-line sendJob">
+                        <div>密码</div>
+                        <input type="password" id="password1">
+                    </div>
+                    <div class="info-line sendJob">
+                        <div>重复密码</div>
+                        <input type="password" id="password2">
+                    </div>
+                    <div class="info-line sendJob" id="nDepartmentId">
+                        <div>部门</div>
+                        <select name="" id="nPart">
+                            <option id="np1">开发部</option>
+                            <option id="np2">人事部</option>
+                        </select>
+                    </div>
+                    <div class="BOTTOM send" onclick="newUser()">创建</div>
+                </div>
+            </div>
+            <div class="contents" id="infoEdit">
+                <h2 class="title">信息更改</h2>
+                <div class="jobEdit" id="infoChange">
+                    <div class="info-line sendJob">
+                        <div>用户名</div>
+                        <input type="text" id="userName">
+                    </div>
+                    <div class="info-line sendJob">
+                        <div>姓名</div>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="info-line sendJob">
+                        <div>性别</div>
+                        <input type="text" id="sex">
+                    </div>
+                    <div class="info-line sendJob">
+                        <div>国家</div>
+                        <input type="text" id="nation">
+                    </div>
+                    <div class="info-line sendJob">
+                        <div>爱好</div>
+                        <input type="text" id="hobby">
+                    </div>
+                    <div class="info-line sendJob">
+                        <div>生日</div>
+                        <input type="text" id="birth">
+                    </div>
+                    <div class="info-line sendJob">
+                        <div>手机号</div>
+                        <input type="text"id="uphone">
+                    </div>
+                    <div class="info-line sendJob">
+                        <div>地址</div>
+                        <input type="text" id="uaddress">
+                    </div>
+                    <div class="info-line sendJob" id="departmentId">
+                        <div>部门</div>
+                        <select name="" id="part">
+                            <option id="p1">开发部</option>
+                            <option id="p2">人事部</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="../js/jquery-3.3.1.js"></script>
+<script src="../js/jquery.cookie.js"></script>
+<script src="../js/admin.js"></script>
+</html>
